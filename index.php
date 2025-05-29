@@ -53,26 +53,7 @@
             <h1 class="main-title">Inicia sesión</h1>
             <?php if (!empty($mensaje)) echo "<div class='error-msg'>$mensaje</div>"; ?>
             <form action="index.php" method="POST">
-                    <?php
-require_once 'vendor/autoload.php';
-
-$client = new Google_Client();
-$client->setClientId('975567081498-voblkm52uont1r9meijv4v65j32hdgsn.apps.googleusercontent.com');
-$client->setClientSecret('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');
-$client->setRedirectUri('http://localhost/config.php');
-$client->addScope("email");
-$client->addScope("profile");
-
-$login_url = $client->createAuthUrl();
-
-echo "<a href='$login_url' style='font-size:20px;' class='btn-google'>Continuar con Google</a>";
-echo "<form action='$login_url' method='get'>
-  <img src='images/SIN COMPLETAR XQ LA IMAGEN QUEDA GIGANTESCA' alt='Google' class='google-icon'>
-  <button type='submit' class='btn-google'>Continuar con Google</button>
-</form>"
-?>
-
-
+                <button type="button" class="btn-google">Continuar con Google</button>
                 <hr class="hr">
                 <hr>
                 <input type="text" name="User" class="form-control-custom" placeholder="Email o usuario" required>
@@ -120,3 +101,4 @@ echo "<form action='$login_url' method='get'>
     </script>
 </body>
 </html>
+
