@@ -1,4 +1,6 @@
+
 /* Estilos generales */
+
 body {
     background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #000000 100%);
     min-height: 100vh;
@@ -57,16 +59,6 @@ body {
     margin-bottom: 1.5rem;
     width: 100%;
     cursor: pointer;
-    display: flex;               /* ← para alinear ícono y texto */
-    align-items: center;
-    justify-content: center;
-    gap: 10px;                   /* espacio entre ícono y texto */
-    font-size: 16px;
-}
-
-.google-icon {
-    width: 5px;
-    height: 5px;
 }
 
 .btn-google:hover {
@@ -86,6 +78,10 @@ body {
     box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
     width: 100%;
     cursor: pointer;
+    display: block;
+    margin: 1rem auto 0 auto; /* Cambia esta línea */
+    text-align: center;
+    box-sizing: border-box; /* Agrega esta línea */
 }
 
 .btn-primary:hover {
@@ -238,11 +234,15 @@ body {
 
 /* Página de bienvenida */
 .welcome-container {
-    min-height: 100vh;
+    position: absolute;
+    inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+
+    height: 100vh; /* Usamos height en vez de min-height para evitar overflow */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0; /* Quitamos padding que causa scroll */
+    overflow: hidden; /* Previene scroll innecesario */
 }
 
 .welcome-card {
@@ -255,6 +255,7 @@ body {
     text-align: center;
     max-width: 500px;
     width: 100%;
+    
 }
 
 .welcome-title {
@@ -330,6 +331,12 @@ body {
 .mb-3 { margin-bottom: 1.5rem; }
 
 .w-100 { width: 100%; }
+
+.d-block { display: block; }
+.d-flex { display: flex; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+
 
 .d-block { display: block; }
 .d-flex { display: flex; }

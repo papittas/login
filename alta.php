@@ -76,7 +76,7 @@
             
             <div class="links-container">
                 <div class="register-text">
-                    ¿Ya tienes cuenta? <a href="index.php" class="register-link">Inicia sesión</a>
+                    ¿Ya tenes cuenta? <a href="index.php" class="register-link">Inicia sesión</a>
                 </div>
             </div>
         </div>
